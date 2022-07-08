@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  margin: 20px;
+  text-decoration: none;
+}
+
+#inputs {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 10px;
+}
