@@ -13,3 +13,11 @@ export default function booksReducer(state = { todos: [] }, action = {}) {
       return state;
   }
 }
+
+// Action Creators
+export function addBook(book) {
+  return {
+    type: LOAD,
+    payLoad: book,
+  };
+}
