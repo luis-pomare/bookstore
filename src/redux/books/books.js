@@ -17,7 +17,7 @@ export default function booksReducer(state = { todos: [] }, action = {}) {
 // Action Creators
 export function addBook(book) {
   return {
-    type: LOAD,
+    type: ADD,
     payLoad: book,
   };
 }
