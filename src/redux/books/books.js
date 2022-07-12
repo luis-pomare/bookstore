@@ -19,11 +19,11 @@ const initial = [
 // Reducer
 export default function booksReducer(
   state = { books: [...initial] },
-  action = {},
+  action = {}
 ) {
   switch (action.type) {
     case ADD:
-      return { books: [action.payLoad] };
+      return { books: [...state.books, action.payLoad] };
     case REMOVE:
       return state;
     default:
