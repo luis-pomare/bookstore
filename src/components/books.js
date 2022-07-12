@@ -3,10 +3,13 @@ import Book from './book';
 import Form from './form';
 
 const Books = () => {
-  const { title, author } = store.getState().books[2];
+  const { books } = store.getState();
+
   return (
     <main>
-      <Book title={title} author={author} />
+      {books.map((book) => (
+        <Book title={book.title} author={book.author} key={book.title} />
+      ))}
       <Form />
     </main>
   );

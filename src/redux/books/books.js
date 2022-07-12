@@ -3,23 +3,23 @@ const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
 const initial = [
   {
-    title: 'Tone',
-    author: 'Aone',
+    title: 'one',
+    author: 'one',
   },
   {
-    title: 'Ttwo',
-    author: 'Atwo',
+    title: 'two',
+    author: 'two',
   },
   {
-    title: 'Tthree',
-    author: 'Athree',
+    title: 'three',
+    author: 'three',
   },
 ];
 
-// Reducer
+// Reducer;
 export default function booksReducer(
   state = { books: [...initial] },
-  action = {}
+  action = {},
 ) {
   switch (action.type) {
     case ADD:
