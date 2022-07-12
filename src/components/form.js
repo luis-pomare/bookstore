@@ -19,7 +19,6 @@ const Form = () => {
     e.preventDefault();
     const { title, author } = state;
     store.dispatch(actions.addBook({ title, author }));
-    console.log(store.getState());
     setState({
       title: '',
       author: '',
