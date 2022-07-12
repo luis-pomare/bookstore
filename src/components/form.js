@@ -17,8 +17,13 @@ const Form = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    store.dispatch(actions.addBook({ title: 'four', author: 'fout' }));
+    const { title, author } = state;
+    store.dispatch(actions.addBook({ title, author }));
     console.log(store.getState());
+    setState({
+      title: '',
+      author: '',
+    });
   };
 
   return (
