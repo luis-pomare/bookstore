@@ -1,12 +1,29 @@
 // Actions
 const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
+const initial = [
+  {
+    title: 'Tone',
+    author: 'Aone',
+  },
+  {
+    title: 'Ttwo',
+    author: 'Atwo',
+  },
+  {
+    title: 'Tthree',
+    author: 'Athree',
+  },
+];
 
 // Reducer
-export default function booksReducer(state = { todos: [] }, action = {}) {
+export default function booksReducer(
+  state = { books: [...initial] },
+  action = {},
+) {
   switch (action.type) {
     case ADD:
-      return { todos: [...state.todos, action.payLoad] };
+      return { books: [action.payLoad] };
     case REMOVE:
       return state;
     default:

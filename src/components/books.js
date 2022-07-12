@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
-
+import store from '../redux/configureStore';
 import Book from './book';
 import Form from './form';
 
 const Books = () => {
-  const [bookInfo] = useState({
-    author: 'JK Rollins',
-    title: 'Harry Potter',
-  });
-  const { title, author } = bookInfo;
+  const { title, author } = store.getState().books[2];
   return (
     <main>
       <Book title={title} author={author} />
