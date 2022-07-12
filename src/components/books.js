@@ -4,9 +4,9 @@ import Book from './book';
 import Form from './form';
 
 const Books = () => {
-  const [books, setBooks] = useState(store.getState().books);
+  const [books, setBooks] = useState(store.getState().books.books);
   store.subscribe(() => {
-    setBooks(store.getState().books);
+    setBooks(store.getState().books.books);
   });
 
   return (

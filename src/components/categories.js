@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import store from '../redux/configureStore';
 
 const Categories = () => {
-  const [categories, setCategories] = useState(store.getState().categories);
+  const [categories, setCategories] = useState(
+    store.getState().categories.categories,
+  );
 
   store.subscribe(() => {
-    setCategories(store.getState().categories);
+    setCategories(store.getState().categories.categories);
   });
 
   const handleClick = () => {

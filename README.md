@@ -2,7 +2,7 @@
 
 # Bookstore
 
-> This is going to be an app similar to "awesome books" but created with react and react-router instead of plain JS. In this milestone, we have added the basic components and the router that gives the possibility to navigate between the dynamic content.
+> Redux based website, this aplication keeps track of the state in a single place with help of the redux state managment library.
 
 ## Built With
 
@@ -10,6 +10,7 @@
 - JavaScript
 - React
 - React router
+- Redux
 
 ## App screenshot
 
