@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import * as actions from '../redux/books/books';
 import store from '../redux/configureStore';
 
@@ -18,7 +19,7 @@ const Form = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const { title, author } = state;
-    store.dispatch(actions.addBook({ title, author }));
+    store.dispatch(actions.addBook({ title, author, id: uuidv4() }));
     setState({
       title: '',
       author: '',
