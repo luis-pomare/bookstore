@@ -8,7 +8,9 @@ export default function booksReducer(state = { books: [] }, action = {}) {
     case ADD:
       return { books: [...state.books, action.payLoad] };
     case REMOVE:
-      return state;
+      return {
+        books: [...state.books.filter((book) => book.id !== action.payLoad)],
+      };
     default:
       return state;
   }
@@ -19,5 +21,12 @@ export function addBook(book) {
   return {
     type: ADD,
     payLoad: book,
+  };
+}
+
+export function removeBook(id) {
+  return {
+    type: REMOVE,
+    payLoad: id,
   };
 }

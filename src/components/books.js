@@ -12,7 +12,12 @@ const Books = () => {
   return (
     <main>
       {books.map((book) => (
-        <Book title={book.title} author={book.author} key={book.id} />
+        <Book
+          title={book.title}
+          author={book.author}
+          key={book.id}
+          id={book.id}
+        />
       ))}
       <Form />
     </main>
