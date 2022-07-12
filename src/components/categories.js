@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import store from '../redux/configureStore';
 
-const Categories = () => (
-  <>
-    <button type="button">Check status</button>
-  </>
-);
+const Categories = () => {
+  const [categories, setCategories] = useState(store.getState().categories);
+
+  store.subscribe(() => {
+    setCategories(store.getState().categories);
+  });
+
+  const handleClick = () => {
+    store.dispatch({ type: 'bookstore/categories/CHECK' });
+  };
+
+  return (
+    <>
+      <p>{categories}</p>
+      <button type="button" onClick={handleClick}>
+        Check status
+      </button>
+    </>
+  );
+};
 
 export default Categories;
