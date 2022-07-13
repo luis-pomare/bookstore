@@ -1,5 +1,4 @@
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux/es/exports';
+import { useSelector, useDispatch } from 'react-redux';
 import { checkCategories } from '../redux/categories/categories';
 
 const Categories = () => {
@@ -21,4 +20,3 @@ const Categories = () => {
 };
 
 export default Categories;
-// { type: 'bookstore/categories/CHECK' }
