@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import store from '../redux/configureStore';
 
 const Categories = () => {
-  const [categories, setCategories] = useState(
-    store.getState().categories.categories,
-  );
-
-  store.subscribe(() => {
-    setCategories(store.getState().categories.categories);
-  });
+  const categories = useSelector((state) => state.categories.categories);
 
   const handleClick = () => {
     store.dispatch({ type: 'bookstore/categories/CHECK' });
