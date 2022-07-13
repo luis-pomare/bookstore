@@ -1,12 +1,12 @@
 import React from 'react';
-import store from '../redux/configureStore';
+import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const Book = (prop) => {
   const { title, author, id } = prop;
-
+  const dispatch = useDispatch();
   const clickHandler = () => {
-    store.dispatch(removeBook(id));
+    dispatch(removeBook(id));
   };
 
   return (
