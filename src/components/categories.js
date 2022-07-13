@@ -1,12 +1,13 @@
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux/es/exports';
+import { checkCategories } from '../redux/categories/categories';
 
 const Categories = () => {
   const categories = useSelector((state) => state.categories.categories);
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch({ type: 'bookstore/categories/CHECK' });
+    dispatch(checkCategories());
   };
 
   return (
