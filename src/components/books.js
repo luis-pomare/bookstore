@@ -1,13 +1,9 @@
-import { useState } from 'react';
-import store from '../redux/configureStore';
+import { useSelector } from 'react-redux';
 import Book from './book';
 import Form from './form';
 
 const Books = () => {
-  const [books, setBooks] = useState(store.getState().books.books);
-  store.subscribe(() => {
-    setBooks(store.getState().books.books);
-  });
+  const books = useSelector((state) => state.books.books);
 
   return (
     <main>
