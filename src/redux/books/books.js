@@ -9,15 +9,13 @@ const CLEAR = 'bookstore/books/CLEAR';
 const BOOKTHUNK = 'bookstore/books/BOOKTHUNK';
 
 export const addBookThunk = createAsyncThunk(BOOKTHUNK, async (book) => {
-  const response = await fetch(booksEndpoint, {
+  await fetch(booksEndpoint, {
     method: 'POST',
     body: JSON.stringify(book),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  const objResponse = await response.text();
-  console.log(objResponse);
 });
 
 // Reducer;
