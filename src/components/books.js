@@ -15,11 +15,13 @@ const Books = () => {
       const books = await response.json();
       const keys = Object.keys(books);
 
+      dispatch(clearBooks());
+
       keys.forEach((key) => {
-        dispatch(clearBooks());
         dispatch(addBook({ ...books[key][0], id: key }));
       });
     };
+
     fetchBooks();
   }, []);
 
