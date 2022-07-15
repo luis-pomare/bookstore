@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import Book from './book';
 import Form from './form';
 import { booksEndpoint } from '../redux/configureStore';
-import { addBook } from '../redux/books/books';
+import { addBook, clearBooks } from '../redux/books/books';
 
 const Books = () => {
   const books = useSelector((state) => state.books.books);
@@ -16,7 +16,8 @@ const Books = () => {
       const keys = Object.keys(books);
 
       keys.forEach((key) => {
-        dispatch(addBook(books[key][0]));
+        dispatch(clearBooks());
+        dispatch(addBook({ ...books[key][0], id: key }));
       });
     };
     fetchBooks();
