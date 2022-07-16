@@ -171,12 +171,13 @@ input {
 .bookStatus {
   width: 20rem;
   justify-content: space-between;
+  gap: 50px;
 }
 
 h5 {
   width: 4.25rem;
   height: 2.438rem;
-  margin: 0.063rem 5.75rem 0 0.688rem;
+  margin: 0.063rem 0 0 0.688rem;
   font-family: Montserrat, Arial, Verdana, Tahoma, sans-serif;
   font-size: 1.8rem;
   font-weight: normal;
@@ -190,7 +191,7 @@ h5 {
 .bookCompleted {
   width: 5rem;
   height: 1.125rem;
-  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  margin: 0.438rem 0 0.75rem 0.75rem;
   opacity: 0.5;
   font-family: Montserrat, Arial, Verdana, Tahoma, sans-serif;
   font-size: 0.875rem;
@@ -250,4 +251,9 @@ h6 {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+}
+
+.bookPercentage {
+  border-right: solid 2px #e8e8e8;
+  padding-right: 25px;
 }
