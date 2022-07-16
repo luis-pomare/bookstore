@@ -27,7 +27,7 @@ const Form = () => {
       addBookThunk({
         title,
         author,
-        id,
+        item_id: id,
         category: 'default',
       }),
     );
