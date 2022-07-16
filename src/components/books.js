@@ -26,13 +26,14 @@ const Books = () => {
   }, []);
 
   return (
-    <main>
+    <main className="booksContainer">
       {books.map((book) => (
         <Book
           title={book.title}
           author={book.author}
           key={book.id}
           id={book.id}
+          category={book.category}
         />
       ))}
       <Form />

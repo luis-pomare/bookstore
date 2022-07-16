@@ -28,7 +28,7 @@ const Form = () => {
         title,
         author,
         item_id: id,
-        category: 'default',
+        category: 'Web Development',
       }),
     );
     dispatch(addBook({ title, author, id }));
@@ -36,11 +36,12 @@ const Form = () => {
       title: '',
       author: '',
     });
+    window.location.reload(false);
   };
 
   return (
     <form onSubmit={submitHandler}>
-      <h2>Add new book</h2>
+      <h2 className="formTitle">Add new book</h2>
       <div id="inputs">
         <input
           type="text"
@@ -58,8 +59,10 @@ const Form = () => {
           value={state.author}
           onChange={handleChange}
         />
+        <button id="add" type="submit">
+          ADD BOOK
+        </button>
       </div>
-      <button type="submit">add book</button>
     </form>
   );
 };

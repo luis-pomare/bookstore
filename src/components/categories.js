@@ -10,12 +10,12 @@ const Categories = () => {
   };
 
   return (
-    <>
+    <main>
       <p>{categories}</p>
       <button type="button" onClick={handleClick}>
         Check status
       </button>
-    </>
+    </main>
   );
 };
 
