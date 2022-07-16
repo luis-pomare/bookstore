@@ -123,8 +123,8 @@ h4 {
   padding: 7px 10px 7px 10px;
 }
 
-#bookImage {
-  width: 350px;
+.completionIcon {
+  width: 4.25rem;
 }
 
 .formTitle {
@@ -161,4 +161,14 @@ input {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+}
+
+.bookAlign {
+  display: flex;
+  align-items: center;
+}
+
+.bookStatus {
+  width: 20rem;
+  justify-content: space-between;
 }
