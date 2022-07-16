@@ -14,13 +14,19 @@ const Book = (prop) => {
   };
 
   return (
-    <div>
+    <div className="book">
       <h4>{category}</h4>
       <h3>{title}</h3>
       <p>{author}</p>
-      <button type="button" onClick={clickHandler}>
-        remove
-      </button>
+      <ul>
+        <li>Comments</li>
+        <li>
+          <button onClick={clickHandler} type="button">
+            Remove
+          </button>
+        </li>
+        <li>Edit</li>
+      </ul>
     </div>
   );
 };

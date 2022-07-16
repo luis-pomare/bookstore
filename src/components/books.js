@@ -26,7 +26,7 @@ const Books = () => {
   }, []);
 
   return (
-    <main>
+    <main className="booksContainer">
       {books.map((book) => (
         <Book
           title={book.title}
