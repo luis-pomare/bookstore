@@ -65,3 +65,16 @@ main {
   min-height: 100vh;
   padding: 3.2rem 6.25rem 16.563rem 6.25rem;
 }
+
+h4 {
+  margin: 0 4rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
