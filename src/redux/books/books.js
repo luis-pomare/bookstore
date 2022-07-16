@@ -7,6 +7,7 @@ const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
 const CLEAR = 'bookstore/books/CLEAR';
 const BOOKTHUNK = 'bookstore/books/BOOKTHUNK';
+const REMOVETHUNK = 'bookstore/books/REMOVETHUNK';
 
 export const addBookThunk = createAsyncThunk(BOOKTHUNK, async (book) => {
   await fetch(booksEndpoint, {
@@ -16,6 +17,20 @@ export const addBookThunk = createAsyncThunk(BOOKTHUNK, async (book) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
+});
+
+export const removeBookThunk = createAsyncThunk(REMOVETHUNK, async (id) => {
+  const bookEndpoint = booksEndpoint + id;
+  const makeFetch = await fetch(bookEndpoint, {
+    method: 'DELETE',
+    body: JSON.stringify({
+      item_id: id,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  makeFetch();
 });
 
 // Reducer;
