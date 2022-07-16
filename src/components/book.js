@@ -14,20 +14,24 @@ const Book = (prop) => {
   };
 
   return (
-    <div className="book">
+    <section className="book">
       <h4>{category}</h4>
       <h3>{title}</h3>
-      <p>{author}</p>
-      <ul>
-        <li>Comments</li>
+      <p className="blueText">{author}</p>
+      <ul className="bookButtonList">
+        <li className="blueText bookButton">Comments</li>
         <li>
-          <button onClick={clickHandler} type="button">
+          <button
+            onClick={clickHandler}
+            type="button"
+            className="blueText removeButton bookButton"
+          >
             Remove
           </button>
         </li>
-        <li>Edit</li>
+        <li className="blueText bookButton">Edit</li>
       </ul>
-    </div>
+    </section>
   );
 };
 
