@@ -28,8 +28,8 @@ const Form = () => {
         title,
         author,
         item_id: id,
-        category: 'default',
-      }),
+        category: 'Web Development',
+      })
     );
     dispatch(addBook({ title, author, id }));
     setState({
@@ -41,25 +41,25 @@ const Form = () => {
   return (
     <form onSubmit={submitHandler}>
       <h2>Add new book</h2>
-      <div id="inputs">
+      <div id='inputs'>
         <input
-          type="text"
-          id="title"
-          name="title"
-          placeholder="book title"
+          type='text'
+          id='title'
+          name='title'
+          placeholder='book title'
           value={state.title}
           onChange={handleChange}
         />
         <input
-          type="text"
-          id="author"
-          name="author"
-          placeholder="Author"
+          type='text'
+          id='author'
+          name='author'
+          placeholder='Author'
           value={state.author}
           onChange={handleChange}
         />
       </div>
-      <button type="submit">add book</button>
+      <button type='submit'>add book</button>
     </form>
   );
 };

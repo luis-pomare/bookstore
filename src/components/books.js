@@ -33,6 +33,7 @@ const Books = () => {
           author={book.author}
           key={book.id}
           id={book.id}
+          category={book.category}
         />
       ))}
       <Form />
