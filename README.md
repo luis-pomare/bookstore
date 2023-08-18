@@ -2,7 +2,7 @@
 
 # Bookstore
 
-> Redux based website, this aplication keeps track of the state in a single place with help of the redux state managment library.
+> Redux-based website, this application keeps track of the state in a single place with the help of the redux state management library.
 
 ## Built With
 
@@ -11,16 +11,6 @@
 - React
 - React router
 - Redux
-
-## App screenshot
-
-### Desktop
-
-[<img src="app_screenshot.png">](Coming soon!)
-
-### Mobile
-
-[<img src="app_screenshot_mobile.png">](Coming soon!)
 
 ## Getting Started
 
